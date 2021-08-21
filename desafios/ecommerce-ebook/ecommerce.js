@@ -12,3 +12,5 @@ class Ecommerce {
 }
 
 module.exports = Ecommerce
+
+//teste
