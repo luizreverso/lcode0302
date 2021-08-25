@@ -1,4 +1,5 @@
 const User = require("./user")
+// import User from "./user"
 
 class Ecommerce {
     registeredUsers = []
