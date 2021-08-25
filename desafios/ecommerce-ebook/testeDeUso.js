@@ -1,42 +1,27 @@
-const Product = require("./product");
 const Ecommerce = require("./ecommerce");
 
-const contosDoAmanha = new Product({
-    name: "Contos do amanha",
-    valor: 4,
-    author: "Dracula",
-    categories: [
-        "acao",
-        "suspense"
-    ],
-    description: "um astronauta vai para a lua e encontra um portal que o leva para o futuro",
-});
+// CRIAR UM ECOMMERCE
 
-const historiaDoDracula = new Product({
-    name: "historiaDoDracula",
-    valor: 10,
-    author: "Dracula, O Proprio",
-    categories: [
-        "autobiografia",
-        "superacao"
-    ],
-    description: "Bla blabla!",
-});
+const ecommerce = new Ecommerce()
 
-// console.log(contosDoAmanha)
-// console.log(historiaDoDracula)
+// CRIAR UM USUARIO DO ECOMMERCE
+ecommerce.createUser({
+    name:"Yasmin Noronha",
+    email: "yasmin-noronha@tuamaeaquelaursa.com",
+    password:"testeteste",
+    // os abaixo nao sao necessarios para o cadastro de usuario, somente alguem tentando adicionar variaveis ao request
+    x: "teste",
+    y: "password",
+    exec: "DROP TABLE;"
+})
 
-const gamaStore = new Ecommerce([contosDoAmanha, historiaDoDracula]);
+// LOGAR UM USUARIO NO ECOMMERCE
 
-gamaStore.addProduct(new Product({
-    name: "Mil queijos para comer antes de morrer",
-    valor: 1,
-    author: "Desconhecido",
-    categorias: [
-        "suspense",
-        "viagens"
-    ],
-    description: "Uma historia tragica"
-}))
+const loggedUser = ecommerce.login("yasmin-noronha@tuamaeaquelaursa.com", "testeteste")
+console.log(loggedUser)
 
-console.log(gamaStore)
+// ADICIONAR LIVROS AO ECOMMERCE
+
+// ADICIONAR LIVROS AO CARRINHO DE UM USUARIO LOGADO
+
+// FAZER CHECKOUT DO CARRINHO DO USUARIO
