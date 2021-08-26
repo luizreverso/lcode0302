@@ -1,6 +1,7 @@
 {
   "name": "crud-example",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "Projeto Luiza Code carolSN",
   "main": "index.js",
   "scripts": {
@@ -8,6 +9,13 @@
   },
   "author": "",
   "license": "MIT",
+=======
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+>>>>>>> 7b1bbcfd0cd3c8aeb6fcf627c59bf308c655cd4e
   "dependencies": {
     "express": "^4.17.1"
   }
