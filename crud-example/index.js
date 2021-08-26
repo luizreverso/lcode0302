@@ -28,6 +28,31 @@ app.post('/create', (req, res) => {
 // seguindo o padrao CRUD (create, read, update, delete), criar os endpoints restantes
 // bonus round!!!: criar um endpoint de com a intencao de trazer um unico cachorro especificado por algum parametro
 
+
+//crUd - update
+app.put('/update', (req, res) => {
+    console.log(req.body)
+    dogs.splice(dogs.indexOf(req.body.name), 1, req.body.nomeAtual); 
+    console.log("dogs update", dogs)
+    return res.send(dogs)
+      //testar no postman
+      //http://localhost:8000/update?
+      //abaixo disso no postman: ir em Body e definir raw > JSON
+      //enviar o { "nome": "nome do cachorro", "nomeAtual": "novo nome"}
+    })
+  
+  
+  //cruD - delete
+  app.delete('/delete', (req, res) => {
+    dogs.splice(dogs.indexOf(req.body.name), 1); 
+    console.log("dogs delete", dogs)
+    return res.send(dogs)
+    //testar no postman
+    //http://localhost:8000/delete?
+    //abaixo disso no postman: ir em Body e definir raw > JSON
+    //enviar o { "nome": "nome do cachorro" }
+  })
+
 // app.get("/teste", (req, res) => {
 //     console.log("ola eu estou no servidor! :)");
 
