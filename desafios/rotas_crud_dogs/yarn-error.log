@@ -1,0 +1,39 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\jdomi\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add express
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_231\bin;C:\Program Files\Gradle\gradle-6.8.3\bin;C:\Program Files\Java\jre1.8.0_231\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Bitvise SSH Client;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\jdomi\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\jdomi\AppData\Local\Programs\Python\Python38\;C:\Users\jdomi\AppData\Local\Microsoft\WindowsApps;C:\Users\jdomi\AppData\Roaming\npm;C:\Users\jdomi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk1.8.0_231\bin;
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  12.14.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\jdomi\Desktop\LuizaCode\lcode0302\desafios\rotas_crud_dogs\package.json: Unexpected string in JSON at position 96
+      at JSON.parse (<anonymous>)
+      at C:\Users\jdomi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\jdomi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\jdomi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "rotas_crud_dogs",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+    "scripts": {
+      "start": "node index.js"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
