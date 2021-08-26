@@ -1,3 +1,5 @@
+const User = require("./user")
+
 class Ecommerce {
     products
     loggedUsers
@@ -8,6 +10,17 @@ class Ecommerce {
 
     addProduct(product) {
         this.products.push(product)
+    }
+}
+
+
+
+class Ecommerce{
+
+
+    createUser(user){
+        const newUser = NewUser(user)
+        console.log(user)
     }
 }
 

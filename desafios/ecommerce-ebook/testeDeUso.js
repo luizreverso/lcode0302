@@ -1,5 +1,6 @@
 const Product = require("./product");
 const Ecommerce = require("./ecommerce");
+const User = require("./user")
 
 const contosDoAmanha = new Product({
     name: "Contos do amanha",
@@ -40,3 +41,23 @@ gamaStore.addProduct(new Product({
 }))
 
 console.log(gamaStore)
+
+
+// CRIAR UM ECOMMERCE
+
+const ecommerce = new Ecommerce()
+
+//CRIAR UM USUARIO DO ECOMMERCE
+
+ecommerce.createUser({
+    name:"Carol",
+    email:"teste@bom.com",
+    password:"teste",
+
+})
+
+//LOGAR UM USUARIO
+
+//ADICIONAR LIVROS NO ECOMMERCE
+
+//ADICIONAR 

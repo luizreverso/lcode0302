@@ -1,0 +1,22 @@
+{
+  "name": "lcode0302",
+  "version": "1.0.0",
+  "description": "",
+  "main": "boolean.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizreverso/lcode0302.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luizreverso/lcode0302/issues"
+  },
+  "homepage": "https://github.com/luizreverso/lcode0302#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
