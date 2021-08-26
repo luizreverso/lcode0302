@@ -37,9 +37,17 @@ app.delete('/:index', (req, res) => {
     res.send();  
 })
 
+// bonus round!!! criar um endpoint de com a intencao de trazer um unico cachorro especificado por algum parametro
+app.get('/:index', (req,res) => {
+    const {index}= req.params;
+    res.send(dogs[index]);
+    console.log(dogs[index]);
+})
+
 app.listen(port, () => { //vai ouvir uma porta e rodar a aplicação que tiver aqui dentro
   console.log(`Example app listening at http://localhost:${port}`)
 })
 
 // REALIZAR ITERAÇÕES COM O USUÁRIO
+
 
