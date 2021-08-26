@@ -4,25 +4,44 @@ const port = 8000
 
 app.use(express.json())
 
-const dogs = [];
+const dogs = []
 
 app.get('/', (req, res) => {
-    // console.log(req)
-    // console.log("query", req.query)
-    // console.log("params", req.params)
-    // console.log("body", req.body)
-    console.log(dogs)
-    res.send(dogs)
+  // console.log(req)
+  // console.log("query", req.query)
+  // console.log("params", req.params)
+  // console.log("body", req.body)
+  res.send(dogs)
 })
 
 app.post('/create', (req, res) => {
+  console.log('body', req.body)
+  let name = req.body.name
 
-    console.log("body", req.body)
-    dogs.push(req.body.name)
+  if (dogs.indexOf(name) == -1) {
+    dogs.push(name)
+    res.send('Adicionado com sucesso')
+  } else {
+    res.send('Não foi possível adicionar')
+  }
+})
 
-    console.log(dogs)
+app.put('/substituir/:nomeAntigo', (req, res) => {
+  let nomeAntigo = req.params.nomeAntigo
+  let nomeNovo = req.body.name
+  for (let i = 0; i < dogs.length; i++) {
+    if (nomeAntigo == dogs[i]) {
+      dogs[i] = nomeNovo
+    }
+  }
+  res.send('Alterado com sucesso')
+})
 
-    res.send("Adicionado com sucesso")
+app.delete('/deletaDog/:nomeDelete', (req, res) => {
+  let nomeDelete = req.params.nomeDelete
+  let index = dogs.indexOf(nomeDelete) //encontrando o index
+  dogs.splice(index)
+  res.send(`${nomeDelete} deletado com sucesso`)
 })
 
 // seguindo o padrao CRUD (create, read, update, delete), criar os endpoints restantes
@@ -34,8 +53,6 @@ app.post('/create', (req, res) => {
 //     res.send("Hello from teste")w
 // })
 
-
-
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at http://localhost:${port}`)
 })
