@@ -28,7 +28,8 @@ const process = async () => {
                     })
                     .then((data) => {
                         console.log("show", data)
-                        return data[0].nome
+                        return "teste"
+                        // return data[0].nome
                     })
 
                     // .then((res) => res.json())
