@@ -5,9 +5,9 @@ const routes = require("./src/routes")
 
 const app = express()
 
-var users = []
+app.use(express.json())
 
-routes(app, users)
+routes(app)
 
 
 app.listen(5000, () => console.log("server started"))

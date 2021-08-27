@@ -1,5 +1,8 @@
+const users = require("../states/users")
+
 const list = (req, res) => {
-    res.send("retorno do list")
+    console.log("calling list")
+    res.send(users)
 }
 
 module.exports = list
