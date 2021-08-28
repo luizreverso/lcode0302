@@ -1,6 +1,7 @@
 {
   "name": "crud-example",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +10,23 @@
   },
   "author": "",
   "license": "ISC",
+=======
+<<<<<<< HEAD
+  "description": "Projeto Luiza Code carolSN",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+=======
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+>>>>>>> 7b1bbcfd0cd3c8aeb6fcf627c59bf308c655cd4e
+>>>>>>> f93726a072b2b436d5f694ea71aa1049cc5a857e
   "dependencies": {
     "express": "^4.17.1"
   }
