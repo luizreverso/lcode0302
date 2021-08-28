@@ -20,14 +20,22 @@ const divisao = async () => {
     // console.log("DIVISÃO DE X E Y DE UMA ÚNICA API")
     const { x, y } = await fetch("http://localhost:6000/numbers")
         .then((res) => {
-            // console.log("Response do index.js da API: ")
-            // console.log(res)
-            return res.json()
+                if( res.status === 500){
+                    throw "Y não existe!"
+                }
+                return res.json()
+        }).catch((err) => {
+            console.log("Error: ", error)
+            return {}
         })
+
     console.log("DIVISÃO DE X E Y DE UMA ÚNICA API")
     console.log("Valor de X: ", x)
     console.log("Valor de Y: ", y)
     try {
+        if( y.status === 500){
+            throw "Y não existe!"
+        }
         resultado = dividir(x, y)
         console.log("O resultado da divisão é: ", resultado)
     } catch (error) {
@@ -37,7 +45,6 @@ const divisao = async () => {
         console.log("------------------------------------------------------------------------------------------------------------------------------------")
     } 
 }
-
 
 //escrever o mesmo programa, porem x e y vem de duas apis distintas.
 //GET http://localhost:6000/getx GET http://localhost:6000/gety
@@ -50,7 +57,13 @@ const getNumbers = async () => {
         })
     const{y} =  await fetch("http://localhost:6000/gety")
         .then((res) => {
+            if( res.status === 500){
+                throw "Y não existe!"
+            }
             return res.json()
+        }).catch((err) => {
+            console.log("Error: ", error)
+            return {}
         })
     console.log("DIVISÃO DE X E Y API DISTINTAS")
     console.log("Valor de X: ", x)
