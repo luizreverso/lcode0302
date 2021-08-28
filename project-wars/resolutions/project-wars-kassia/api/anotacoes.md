@@ -1,0 +1,4 @@
+- yarn init -y
+- yarn add -D nodemon
+- yarn start
+- Nodemon: Sempre fica "ouvindo" as alterações e reinicia automaticamente;
