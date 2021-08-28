@@ -1,5 +1,7 @@
+const users = require('../states/users')
+
 const list = (req, res) => {
-  res.send('Testando list no aquivo list')
+  res.send(users)
 };
 
 

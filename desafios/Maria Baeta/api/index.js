@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express()
-const porta = 5000;
+const port = 5000;
 const routes = require('./src/routes')
+app.use(express.json());
 
 routes(app)
 
-app.listen(porta, () => console.log('LocalHost rodando na porta 5000'))
+app.listen(port, () => console.log(`LocalHost rodando na porta ${port}`))

@@ -11,8 +11,8 @@ const routes = (app) => {
   // app.get('/list', (req, res) => res.send('Testando list'))
   app.post('/create', createUsers);
   app.get('/list', listUsers);
-  app.put('update', updateUsers);
-  app.delete('/delete', deleteUsers);
+  app.put('/:id', updateUsers);
+  app.delete('/:id', deleteUsers);
 
 }
 
