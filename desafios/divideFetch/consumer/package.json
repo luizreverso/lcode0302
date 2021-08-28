@@ -1,0 +1,15 @@
+{
+  "name": "consumer",
+  "version": "1.0.0",
+  "description": "escrever um programa que consome a api, recebe os valores e calcula x/y e retorna o resultado :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
