@@ -19,7 +19,13 @@ app.get("/getx", (_req, res) => {
     res.send({ x: x !== 7 ? x : undefined })
 })
 
-app.get("/gety", (_req, res) => res.send({ y: Math.floor(Math.random() * 10) }))
+app.get("/gety", (_req, res) => {
+    const y = Math.floor(Math.random() * 10)
+
+    if (y === 4) throw "error because y === 4 :)"
+
+    res.send({ y })
+})
 
 
 
