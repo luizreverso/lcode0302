@@ -17,7 +17,11 @@ const numbers = async () => {
 
 const getNumbers = async () => {
   const { x, y } = await numbers();
-  divide(x, y);
+  if (x !== undefined) {
+    divide(x, y);
+  } else {
+    console.log("Não foi possivel realizar a divisão")
+  }
 };
 
 getNumbers();

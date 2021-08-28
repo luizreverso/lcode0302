@@ -25,8 +25,12 @@ const numberY = async () => {
 const getNumbers = async () => {
   const { x } = await numberX();
   const { y } = await numberY();
-  divide(x, y)
-}
+  if (x !== undefined) {
+    divide(x, y);
+  } else {
+    console.log("Não foi possivel realizar a divisão")
+  }
+ }
 
 getNumbers()
 
