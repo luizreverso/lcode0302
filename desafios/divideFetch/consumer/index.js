@@ -22,6 +22,9 @@ const process = async () => {
         else if(y == undefined){
             throw 'O valor de Y não é definido'
         }
+        else if(y === 0){
+            throw 'Não é possível dividir por 0'
+        }
         else{
             const resposta = x/y;
             console.log("X/Y = ", resposta)
