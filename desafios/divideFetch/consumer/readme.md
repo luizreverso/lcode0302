@@ -5,5 +5,4 @@ GET http://localhost:6000/numbers
 
 escrever o mesmo programa, porem x e y vem de duas apis distintas.
 
-GET http://localhost:6000/getx
-GET http://localhost:6000/gety
+GET http://localhost:6000/getx GET http://localhost:6000/gety
