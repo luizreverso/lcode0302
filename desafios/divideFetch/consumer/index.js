@@ -11,7 +11,7 @@ const divide = (num1, num2) => {
 
 const numbers = async () => {
   const response = await fetch('http://localhost:6000/numbers');
-  const data = response.json();
+  const data =  await response.json();
   return data;
 };
 
