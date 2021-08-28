@@ -1,0 +1,17 @@
+{
+  "name": "consumer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.12"
+  },
+  "description": "escrever um programa que consome a api, recebe os valores e calcula x/y e retorna o resultado :)",
+  "devDependencies": {},
+  "scripts": {
+    "start-dev": "nodemon index.js",
+    "start": "node index"
+  },
+  "author": ""
+}
