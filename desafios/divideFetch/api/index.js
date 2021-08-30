@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 
+
 app.get("/numbers", (_req, res) => {
     console.log("iniciando a requisicao");
 
@@ -11,6 +12,6 @@ app.get("/numbers", (_req, res) => {
         x: x !== 7 ? x : undefined,
         y
     })
-})
+});
 
-app.listen(6000, () => console.log("servidor iniciado na porta 6000"))
+app.listen(9000, () => console.log("servidor iniciado na porta 9000"))
