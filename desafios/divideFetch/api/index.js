@@ -14,4 +14,4 @@ app.get("/numbers", (_req, res) => {
     })
 });
 
-app.listen(9000, () => console.log("servidor iniciado na porta 9000"))
+app.listen(6000, () => console.log("servidor iniciado na porta 6000"))
