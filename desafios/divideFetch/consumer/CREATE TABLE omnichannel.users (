@@ -1,0 +1,10 @@
+CREATE TABLE omnichannel.users (
+	id INT auto_increment NOT NULL COMMENT 'identify user',
+	name varchar(100) NOT NULL COMMENT 'name for user',
+	email varchar(100) NOT NULL,
+	cpf varchar(11) NOT NULL
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
+CREATE INDEX users_id_IDX USING BTREE ON omnichannel.users (id);

@@ -11,6 +11,12 @@ const process = async () => {
     }
 
 
+
+    const {x, y} = await fetch("http://localhost:6000/numbers")
+                    .then(res => res.json())
+
+    
+
     // fetch("http://localhost:5000/create", postParams)
                     // .then(res => res.json())
                     // .then(res => console.log("resultado do create", res))
