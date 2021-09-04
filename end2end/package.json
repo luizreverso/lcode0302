@@ -13,6 +13,7 @@
     "mysql2": "^2.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "swagger-ui-express": "^4.1.6"
   }
 }
